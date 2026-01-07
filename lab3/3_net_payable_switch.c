@@ -4,7 +4,7 @@
 int main()
 {
     int item_type;
-    float sales_price, tax;
+    float sales_price, tax, net_amt;
 
     printf("Select the type of item:\n");
     printf("1. Grocery items\n");
@@ -33,8 +33,14 @@ int main()
         break;
     }
 
+
     printf("Enter the sales price: ");
     scanf("%f", &sales_price);
-    printf("Net payable amount: %.2f\n", sales_price * (1 + tax))   ;
+
+    net_amt = sales_price * (1 + tax);
+    if(net_amt > 6000)
+        net_amt *= 0.98;
+
+    printf("Net payable amount: %.2f\n", net_amt);
     return 0;
 }
