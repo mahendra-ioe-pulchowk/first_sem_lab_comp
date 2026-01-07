@@ -3,9 +3,11 @@
 
 int main()
 {
-    int units;
+    int units, consumer_id;
     float charge;
 
+    printf("Enter consumer_id: ");
+    scanf("%d", &consumer_id);
     printf("Enter units: ");
     scanf("%d", &units);
 
@@ -17,7 +19,7 @@ int main()
         charge = 230 + 0.80 * (units - 100);
     else if(units > 200)
         charge = 390 + 1 * (units - 200);
-
-    printf("Charge: %.2f\n", charge);
+    printf("___________________________\n");
+    printf("\n\nCosumer_id: %d\nElectricity Bill: %.2f\n", consumer_id, charge);
     return 0;
 }
