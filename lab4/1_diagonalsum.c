@@ -5,15 +5,14 @@ int main() {
     int n = 3;
 
     int arr[n][n];
-    char* temp;
 
-    int i,j,k;
+    int i, j;
     printf("Enter the Elements of the matrix:\n");
     for(i = 0; i < n; i++) {
         for(j = 0; j < n; j++) {
                 scanf("%d", &arr[i][j]);
         }
-        printf("\n");
+        //printf("\n");
     }
 
     printf("\n\n");
